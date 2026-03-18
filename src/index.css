@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: 'Inter', system-ui, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply m-0 bg-semantic-canvas text-semantic-textSecondary;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply m-0 font-serif text-semantic-textPrimary;
+  }
+
+  p {
+    @apply m-0;
+  }
+}
+
+@layer components {
+  .type-display {
+    @apply font-serif text-4xl leading-tight tracking-elegant text-semantic-textPrimary md:text-5xl;
+  }
+
+  .type-h1 {
+    @apply font-serif text-3xl leading-snugger tracking-elegant text-semantic-textPrimary md:text-4xl;
+  }
+
+  .type-h2 {
+    @apply font-serif text-2xl leading-snugger tracking-elegant text-semantic-textPrimary md:text-3xl;
+  }
+
+  .type-h3 {
+    @apply font-serif text-xl leading-snugger tracking-elegant text-semantic-textPrimary md:text-2xl;
+  }
+
+  .type-body-lg {
+    @apply text-lg leading-8 text-semantic-textSecondary;
+  }
+
+  .type-body {
+    @apply text-base leading-7 text-semantic-textSecondary;
+  }
+
+  .type-muted {
+    @apply text-[0.9375rem] font-medium leading-6 text-semantic-textSecondary/80;
+  }
+
+  .arch-motif {
+    background-image:
+      radial-gradient(circle at 50% 100%, transparent 0 34px, rgba(95, 33, 56, 0.2) 34px 36px, transparent 36px 46px, rgba(95, 33, 56, 0.2) 46px 48px, transparent 48px);
+    background-size: 170px 52px;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  .arch-edge {
+    background-image:
+      radial-gradient(circle at 10% 0, rgba(95, 33, 56, 0.08) 0 10px, transparent 11px),
+      radial-gradient(circle at 10% 0, rgba(95, 33, 56, 0.08) 0 18px, transparent 19px),
+      radial-gradient(circle at 10% 0, rgba(95, 33, 56, 0.08) 0 26px, transparent 27px);
+    background-repeat: no-repeat;
+    background-size: 48px 28px, 72px 40px, 96px 52px;
+    background-position: right 1.5rem top 1rem, right 1.25rem top 0.75rem,
+      right 1rem top 0.5rem;
+  }
+}
