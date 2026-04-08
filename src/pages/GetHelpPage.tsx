@@ -7,7 +7,6 @@ import { Button } from '../components/ui/Button'
 import { Callout } from '../components/ui/Callout'
 import { Card } from '../components/ui/Card'
 import { SectionHeading } from '../components/ui/SectionHeading'
-import { TextArea, TextInput } from '../components/ui/TextField'
 import { TextLink } from '../components/ui/TextLink'
 
 export function GetHelpPage() {
@@ -15,28 +14,28 @@ export function GetHelpPage() {
 
   const helpWays = [
     {
-      title: 'Talk to a Counselor or Advisor',
+      title: 'UVA Support',
       description:
-        'School counselors and college advisors can help you make a clear plan.',
-      href: '#',
+        'Use UVA advising and student support offices for college process questions.',
+      href: 'https://studentaffairs.virginia.edu/staff',
     },
     {
-      title: 'Contact a Financial Aid Office',
+      title: 'College Guidance Programs',
       description:
-        'Ask direct questions about paying for college and aid requirements.',
-      href: '#',
+        'Find counselors, advisors, and college access programs that guide students.',
+      href: 'https://www.advisevirginia.org/',
     },
     {
-      title: 'Legal / Documentation Help',
+      title: 'Legal Help',
       description:
-        'Reach out for support with immigration or document-related concerns.',
-      href: '#',
+        'Use immigration and documentation support resources for status questions.',
+      href: 'https://www.justice4all.org/',
     },
     {
       title: 'Community Support',
       description:
-        'Connect with local organizations like ISCV and trusted community members.',
-      href: '#',
+        'Find local organizations like ISCV and trusted community support networks.',
+      href: 'https://charlottesvillemasjid.com/',
     },
   ]
 
@@ -71,7 +70,7 @@ export function GetHelpPage() {
     <div className="space-y-4">
       <PageHeaderBlock
         title="Get Help"
-        description="If this process feels confusing or overwhelming, you are not alone. There are people and resources that can support you."
+        description="If the process feels confusing or overwhelming, you are not alone. This page helps you find trusted organizations, advisors, and programs that may be able to support you."
         tone="almond"
       />
 
@@ -82,6 +81,12 @@ export function GetHelpPage() {
             title="You are not alone"
             description="It is normal to feel confused. Many students go through this process without clear guidance, and it is always okay to ask for help."
           />
+          <Callout>
+            <p className="text-sm font-semibold text-semantic-textPrimary">
+              You do not have to figure this out alone. Below are trusted organizations,
+              advisors, and programs that may be able to support you.
+            </p>
+          </Callout>
         </SectionWrapper>
       </ContentSection>
 
@@ -96,7 +101,7 @@ export function GetHelpPage() {
               <Card key={item.title} tone={index % 2 ? 'rose' : 'default'} className="space-y-3">
                 <h3 className="type-h3">{item.title}</h3>
                 <p className="type-body">{item.description}</p>
-                <TextLink href={item.href}>Contact or learn more</TextLink>
+                <TextLink href={item.href}>View organization details</TextLink>
               </Card>
             ))}
           </ResponsiveGrid>
@@ -106,24 +111,29 @@ export function GetHelpPage() {
       <ContentSection tone="default">
         <SectionWrapper tone="default">
           <SectionHeading
-            eyebrow="Contact"
-            title="Request help"
-            description="You can use this simple form layout as a starting point for future support requests."
+            eyebrow="How To Use This Directory"
+            title="Choose support based on your current need"
+            description="Start with one category, check official sources, and follow the resource instructions directly."
           />
-          <Card tone="rose" className="space-y-4 p-5 md:p-6">
-            <TextInput label="Name" placeholder="Your name" />
-            <TextInput label="Email" type="email" placeholder="you@example.com" />
-            <TextArea label="Message" placeholder="Tell us what kind of help you need..." />
-            <div className="flex flex-wrap gap-2.5">
-              <Button type="button">Send Request</Button>
-              <Button variant="secondary" type="button">
-                Save For Later
-              </Button>
-            </div>
+          <Card tone="rose" className="space-y-3 p-5 md:p-6">
+            <p className="text-sm font-semibold text-semantic-textPrimary">Directory guidance</p>
+            <p className="type-body">
+              Look for the category that matches your question, then use the listed
+              organization, office, or program website for the most accurate steps.
+            </p>
             <p className="type-muted">
-              Placeholder: a full contact system can be connected here later.
+              This page is a self-serve guide to trusted external support resources.
             </p>
           </Card>
+          <div className="space-y-3">
+            <Card className="space-y-2 p-5 md:p-6">
+              <p className="text-sm font-semibold text-semantic-textPrimary">Where to start first</p>
+              <p className="type-body">
+                1) Begin with Start Here for checklist planning, 2) review Documents & Legal
+                for required records, and 3) use Financial Aid to prepare forms and scholarship searches.
+              </p>
+            </Card>
+          </div>
         </SectionWrapper>
       </ContentSection>
 
@@ -133,7 +143,7 @@ export function GetHelpPage() {
           <Callout>
             <p className="text-sm font-semibold text-semantic-textPrimary">
               Share personal information only with trusted sources, and be careful with
-              unknown links or contacts online.
+              unknown links online.
             </p>
           </Callout>
         </SectionWrapper>
@@ -179,8 +189,14 @@ export function GetHelpPage() {
           <SectionHeading
             eyebrow="Final Message"
             title="You do not have to figure this out alone."
-            description="There are people who want to help you succeed."
+            description="Use trusted organizations, advisors, and programs to take your next step with confidence."
           />
+          <Callout tone="subtle">
+            <p className="text-sm font-semibold text-semantic-textPrimary">
+              Always check official websites or contact these organizations directly, as
+              policies and requirements may change.
+            </p>
+          </Callout>
         </SectionWrapper>
       </ContentSection>
     </div>

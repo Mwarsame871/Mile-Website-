@@ -34,9 +34,14 @@ export function SiteFooter() {
             </div>
 
             <div className="space-y-3">
-              <p className="text-sm font-semibold text-semantic-textPrimary">Contact</p>
-              <p className="type-muted">hello@milecollegeguide.org</p>
-              <p className="type-muted">Charlottesville, VA</p>
+              <p className="text-sm font-semibold text-semantic-textPrimary">Support Directory</p>
+              <p className="type-muted">
+                Use the Get Help page to find trusted organizations, advisors, offices,
+                and programs.
+              </p>
+              <p className="type-muted">
+                Always verify details with official websites and sources.
+              </p>
             </div>
           </div>
         </ContentWidth>

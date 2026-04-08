@@ -16,17 +16,17 @@ export function ResourcesPage() {
     {
       name: 'School counselors / advisors',
       description: 'Get help with application planning, deadlines, and next steps.',
-      href: '#',
+      href: 'https://www.charlottesvilleschools.org/chs',
     },
     {
       name: 'College access programs',
       description: 'Programs that guide students through admissions and preparation.',
-      href: '#',
+      href: 'https://www.advisevirginia.org/',
     },
     {
       name: 'High school & community guidance',
       description: 'Local school and community organizations with college support.',
-      href: '#',
+      href: 'https://www.charlottesvilleschools.org/',
     },
   ]
 
@@ -34,22 +34,22 @@ export function ResourcesPage() {
     {
       name: 'FAFSA / federal aid',
       description: 'Official starting point for many federal financial aid options.',
-      href: '#',
+      href: 'https://studentaid.gov/understand-aid/eligibility/requirements',
     },
     {
       name: 'QuestBridge',
       description: 'A college access and scholarship pathway for eligible students.',
-      href: '#',
+      href: 'https://www.questbridge.org/',
     },
     {
       name: 'Dell Scholars',
       description: 'Scholarship support for students with strong college potential.',
-      href: '#',
+      href: 'https://www.dellscholars.org/',
     },
     {
       name: 'Other scholarship programs',
       description: 'Search local, state, and community scholarship opportunities.',
-      href: '#',
+      href: 'https://opportunities.unhcr.org/',
     },
   ]
 
@@ -57,17 +57,17 @@ export function ResourcesPage() {
     {
       name: 'Immigration lawyers',
       description: 'Professional legal guidance for complex status questions.',
-      href: '#',
+      href: 'https://www.tcruzlaw.com/',
     },
     {
       name: 'Legal aid organizations',
       description: 'Low-cost or free legal support services in many communities.',
-      href: '#',
+      href: 'https://www.justice4all.org/',
     },
     {
       name: 'Community legal clinics',
       description: 'Local clinics that may provide document and legal process help.',
-      href: '#',
+      href: 'https://www.law.virginia.edu/immigration-law-clinic',
     },
   ]
 
@@ -75,17 +75,17 @@ export function ResourcesPage() {
     {
       name: 'ISCV and mosque/community partners',
       description: 'Trusted community support with culturally grounded guidance.',
-      href: '#',
+      href: 'https://charlottesvillemasjid.com/',
     },
     {
       name: 'Local organizations',
       description: 'Community programs that support youth and family success.',
-      href: '#',
+      href: 'https://www.rescue.org/united-states/charlottesville-va',
     },
     {
-      name: 'Student groups and mentorship programs',
-      description: 'Peer support, mentorship, and shared college experience.',
-      href: '#',
+      name: 'Student groups and peer support programs',
+      description: 'Peer support and shared college experience from trusted communities.',
+      href: 'https://atuva.student.virginia.edu/organizations',
     },
   ]
 
@@ -93,17 +93,17 @@ export function ResourcesPage() {
     {
       name: 'QuestBridge',
       description: 'Explore a pathway to strong college matches and scholarship support.',
-      href: '#',
+      href: 'https://www.questbridge.org/',
     },
     {
       name: 'School counselor support',
       description: 'A direct and practical place to ask your first questions.',
-      href: '#',
+      href: 'https://www.charlottesvilleschools.org/chs',
     },
     {
       name: 'Community legal help',
       description: 'Useful when you need support with documents or status concerns.',
-      href: '#',
+      href: 'https://www.justice4all.org/',
     },
   ]
 
@@ -138,7 +138,7 @@ export function ResourcesPage() {
     <div className="space-y-4">
       <PageHeaderBlock
         title="Resources"
-        description="This page includes helpful links, contacts, and tools to support you through college applications, aid, documents, and next steps."
+        description="This page includes helpful links, organizations, and tools to support you through college applications, aid, documents, and next steps."
         tone="rose"
       />
 

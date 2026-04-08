@@ -8,6 +8,7 @@ import { Button } from '../components/ui/Button'
 import { Callout } from '../components/ui/Callout'
 import { Card } from '../components/ui/Card'
 import { SectionHeading } from '../components/ui/SectionHeading'
+import { TextLink } from '../components/ui/TextLink'
 
 export function StartHerePage() {
   const navigate = useNavigate()
@@ -100,9 +101,86 @@ export function StartHerePage() {
     },
     {
       title: 'Get Help',
-      description: 'Connect with guidance if you want one-on-one support.',
+      description: 'Find trusted organizations, advisors, and programs for support.',
       to: '/get-help',
       tone: 'default' as const,
+    },
+  ]
+
+  const timelineSteps = [
+    {
+      phase: 'Junior year (spring)',
+      details:
+        'Build your school list, review admission requirements, and start your core document folder.',
+    },
+    {
+      phase: 'Summer before senior year',
+      details:
+        'Draft your personal statement, identify recommendation writers, and organize deadlines.',
+    },
+    {
+      phase: 'Senior year (fall)',
+      details:
+        'Submit Early Decision or Early Action applications where applicable (UVA student deadline: November 1).',
+    },
+    {
+      phase: 'Senior year (winter)',
+      details:
+        'Submit Regular Decision applications (UVA student deadline: January 5) and continue aid forms.',
+    },
+    {
+      phase: 'Senior year (spring)',
+      details:
+        'Review decisions and aid offers, then finalize enrollment steps by school commitment deadlines.',
+    },
+  ]
+
+  const deadlineFlow = [
+    {
+      title: 'Application cycle checkpoint',
+      detail:
+        'Application season launch is posted by Common App (for example, the 2025-2026 season launched on August 01, 2025).',
+      link: 'https://www.commonapp.org/blog/common-app-celebrates-its-50th-anniversary-launch-2025-2026-application-season',
+      linkLabel: 'Common App season launch update',
+    },
+    {
+      title: 'UVA application deadlines',
+      detail:
+        'UVA lists Early Decision/Early Action student deadline as November 1 and Regular Decision student deadline as January 5.',
+      link: 'https://admission.virginia.edu/admission/deadlines-instructions',
+      linkLabel: 'UVA deadlines and instructions',
+    },
+    {
+      title: 'FAFSA window and deadlines',
+      detail:
+        'FAFSA is governed by school deadline, state deadline, and federal deadline. Federal FAFSA deadline is June 30 for each academic year.',
+      link: 'https://studentaid.gov/articles/3-fafsa-deadlines',
+      linkLabel: 'Federal Student Aid deadline guide',
+    },
+    {
+      title: 'Enrollment decision timing',
+      detail:
+        'Many admission plans use May 1 as the enrollment commitment date after decisions are released.',
+      link: 'https://admission.virginia.edu/admission/deadlines-instructions',
+      linkLabel: 'UVA notification and enrollment dates',
+    },
+  ]
+
+  const decisionPaths = [
+    {
+      trigger: 'If your documents are missing or incomplete',
+      action: 'Go to Documents & Legal first, then return here to complete your checklist.',
+      to: '/documents-legal',
+    },
+    {
+      trigger: 'If you are unsure how college costs will be covered',
+      action: 'Start with Financial Aid to review aid eligibility, forms, and scholarship paths.',
+      to: '/financial-aid',
+    },
+    {
+      trigger: 'If you are unsure where to ask questions',
+      action: 'Use Get Help to find trusted organizations, offices, and advisors.',
+      to: '/get-help',
     },
   ]
 
@@ -170,6 +248,74 @@ export function StartHerePage() {
               </Card>
             ))}
           </ResponsiveGrid>
+        </SectionWrapper>
+      </ContentSection>
+
+      <ContentSection tone="almond">
+        <SectionWrapper tone="almond">
+          <SectionHeading
+            eyebrow="Timeline"
+            title="Simple timeline to stay on track"
+            description="A practical rhythm you can follow and adjust to your school list."
+          />
+          <ResponsiveGrid columns={2}>
+            {timelineSteps.map((step, index) => (
+              <Card key={step.phase} tone={index % 2 ? 'rose' : 'default'} className="space-y-2">
+                <p className="text-sm font-semibold text-semantic-textPrimary">{step.phase}</p>
+                <p className="type-body">{step.details}</p>
+              </Card>
+            ))}
+          </ResponsiveGrid>
+        </SectionWrapper>
+      </ContentSection>
+
+      <ContentSection tone="default">
+        <SectionWrapper tone="default">
+          <SectionHeading
+            eyebrow="Deadlines"
+            title="Deadline flow from official sources"
+            description="Use these checkpoints first, then verify each school-specific deadline directly."
+          />
+          <ResponsiveGrid columns={2}>
+            {deadlineFlow.map((item, index) => (
+              <Card key={item.title} tone={index % 2 ? 'rose' : 'default'} className="space-y-2">
+                <p className="text-sm font-semibold text-semantic-textPrimary">{item.title}</p>
+                <p className="type-body">{item.detail}</p>
+                <TextLink href={item.link}>{item.linkLabel}</TextLink>
+              </Card>
+            ))}
+          </ResponsiveGrid>
+          <Callout tone="subtle">
+            <p className="type-body">
+              Deadline windows can change. Always check each school and official aid site
+              before submitting.
+            </p>
+          </Callout>
+        </SectionWrapper>
+      </ContentSection>
+
+      <ContentSection tone="rose">
+        <SectionWrapper tone="rose">
+          <SectionHeading
+            eyebrow="Decision Paths"
+            title="If this happens, start here"
+            description="Use the matching path below when you get stuck."
+          />
+          <div className="space-y-3">
+            {decisionPaths.map((path) => (
+              <Card key={path.trigger} className="space-y-2 p-5 md:p-6">
+                <p className="text-sm font-semibold text-semantic-textPrimary">{path.trigger}</p>
+                <p className="type-body">{path.action}</p>
+                <TextLink href={`#${path.to}`}>Open section</TextLink>
+              </Card>
+            ))}
+          </div>
+          <Callout tone="subtle">
+            <p className="type-body">
+              Printable checklist tip: open this page on desktop and use your browser print
+              option to save a copy for offline planning.
+            </p>
+          </Callout>
         </SectionWrapper>
       </ContentSection>
 

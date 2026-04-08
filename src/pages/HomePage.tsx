@@ -14,25 +14,29 @@ export function HomePage() {
   const paths = [
     {
       title: 'Start the College Process',
-      description: 'A clear first step if you are unsure where to begin.',
+      description:
+        'Learn how college applications work and how to navigate them step by step.',
       to: '/start-here',
       tone: 'default' as const,
     },
     {
       title: 'Understand Financial Aid',
-      description: 'Learn how to pay for college and where aid may come from.',
+      description:
+        'Learn how to pay for college, including financial aid requirements and scholarships.',
       to: '/financial-aid',
       tone: 'rose' as const,
     },
     {
       title: 'Documents & Legal Help',
-      description: 'Get guidance for paperwork, deadlines, and legal status questions.',
+      description:
+        'Understand required documents, legal status, and what to do if documents are missing.',
       to: '/documents-legal',
       tone: 'default' as const,
     },
     {
-      title: 'Find Support',
-      description: 'Connect with people and services that can support your journey.',
+      title: 'Get Help',
+      description:
+        'Find trusted organizations, advisors, and programs that can support you.',
       to: '/get-help',
       tone: 'rose' as const,
     },
@@ -41,17 +45,19 @@ export function HomePage() {
   const resourcePreview = [
     {
       title: 'Scholarships',
-      description: 'Find scholarship opportunities and application tips.',
+      description:
+        'Find scholarship opportunities that support refugee and low-income students.',
       to: '/resources',
     },
     {
       title: 'Financial Aid Help',
-      description: 'Understand forms, timelines, and common requirements.',
+      description: 'Understand eligibility, requirements, and how aid works.',
       to: '/financial-aid',
     },
     {
       title: 'Legal Guidance',
-      description: 'See trusted guidance for documentation and legal process support.',
+      description:
+        'Learn about documentation, legal status, and available support.',
       to: '/documents-legal',
     },
   ]
@@ -66,7 +72,7 @@ export function HomePage() {
           </h1>
           <p className="type-body max-w-prose">
             We help refugee students move through the college process step by step,
-            with clear guidance, trusted resources, and human support.
+            with clear guidance, trusted resources, and access to support when you need it.
           </p>
           <div className="flex flex-wrap gap-2.5">
             <Button onClick={() => navigate('/start-here')}>Start Here</Button>
@@ -110,7 +116,7 @@ export function HomePage() {
           <SectionHeading
             eyebrow="Why This Exists"
             title="College systems can feel hard to navigate"
-            description="Many refugee students face barriers with language, financial aid, documentation, and unfamiliar systems. This platform exists to make those steps clearer and more supportive."
+            description="Many refugee students face barriers with language, financial aid, documentation, and unfamiliar systems. This platform exists to make those steps clearer by organizing trusted information, guidance, and support resources in one place."
           />
         </SectionWrapper>
       </ContentSection>
@@ -124,15 +130,21 @@ export function HomePage() {
           <ResponsiveGrid columns={3}>
             <Card className="space-y-2">
               <p className="text-sm font-semibold text-semantic-textPrimary">1. Learn the process</p>
-              <p className="type-body">Understand what comes first and what to do next.</p>
+              <p className="type-body">
+                Understand how college applications work and what steps to take.
+              </p>
             </Card>
             <Card tone="rose" className="space-y-2">
               <p className="text-sm font-semibold text-semantic-textPrimary">2. Explore resources</p>
-              <p className="type-body">Use guides and tools matched to your needs.</p>
+              <p className="type-body">
+                Access guides on financial aid, documents, and applications.
+              </p>
             </Card>
             <Card className="space-y-2">
               <p className="text-sm font-semibold text-semantic-textPrimary">3. Get support</p>
-              <p className="type-body">Reach out when you need direct help and clarity.</p>
+              <p className="type-body">
+                Use trusted organizations, advisors, and programs when you need help.
+              </p>
             </Card>
           </ResponsiveGrid>
         </SectionWrapper>
@@ -162,7 +174,7 @@ export function HomePage() {
           <SectionHeading
             eyebrow="Next Step"
             title="Take one step today"
-            description="Small progress matters. Begin where you feel most ready."
+            description="Small progress matters. Start where you feel most ready and take the next step."
             action={
               <div className="flex flex-wrap gap-2.5">
                 <Button onClick={() => navigate('/start-here')}>Start Here</Button>

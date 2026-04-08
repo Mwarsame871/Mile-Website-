@@ -1,124 +1,25 @@
-import { Link, useNavigate } from 'react-router-dom'
 import { ContentSection } from '../components/layout/ContentSection'
 import { PageHeaderBlock } from '../components/layout/PageHeaderBlock'
-import { ResponsiveGrid } from '../components/layout/ResponsiveGrid'
 import { SectionWrapper } from '../components/layout/SectionWrapper'
-import { Button } from '../components/ui/Button'
 import { Callout } from '../components/ui/Callout'
 import { Card } from '../components/ui/Card'
 import { SectionHeading } from '../components/ui/SectionHeading'
-import { TextLink } from '../components/ui/TextLink'
 
 export function DocumentsLegalPage() {
-  const navigate = useNavigate()
-
-  const commonDocuments = [
-    {
-      name: 'I-94 record',
-      explanation:
-        'This is your arrival/departure record and can help schools understand your situation.',
-      whyItMatters:
-        'It may be used when reviewing aid eligibility and required documentation.',
-    },
-    {
-      name: 'Proof of status',
-      explanation:
-        'This can include documents showing refugee, asylee, or related status.',
-      whyItMatters:
-        'Status information can affect what support and aid options are available.',
-    },
-    {
-      name: 'Identification documents',
-      explanation:
-        'Basic identity documents help verify who you are during applications.',
-      whyItMatters:
-        'Schools use these records to process applications correctly and safely.',
-    },
-    {
-      name: 'School records (transcripts)',
-      explanation:
-        'Transcripts show your classes and grades from previous schools.',
-      whyItMatters:
-        'Colleges use them to review academic history and admissions readiness.',
-    },
-  ]
-
-  const helpResources = [
-    {
-      title: 'School counselors / advisors',
-      description: 'Ask for help understanding required forms and school deadlines.',
-      href: '#',
-    },
-    {
-      title: 'Financial aid offices',
-      description: 'Confirm aid forms and document requirements for your situation.',
-      href: '#',
-    },
-    {
-      title: 'Immigration lawyers / legal help',
-      description: 'Get reliable legal guidance when status questions are complex.',
-      href: '#',
-    },
-    {
-      title: 'Community organizations (like ISCV)',
-      description: 'Find local support for families navigating college systems.',
-      href: '#',
-    },
-  ]
-
-  const faqs = [
-    {
-      question: 'What if I do not have all my documents yet?',
-      answer:
-        'You can still begin. Ask schools what to submit now and what can be sent later.',
-    },
-    {
-      question: 'What if my status is still pending?',
-      answer:
-        'That is okay. Contact financial aid and trusted advisors early to plan your next steps.',
-    },
-    {
-      question: 'Who can I talk to about my situation?',
-      answer:
-        'Start with a counselor, advisor, or trusted legal support organization.',
-    },
-  ]
-
-  const nextSteps = [
-    {
-      title: 'Financial Aid',
-      description: 'Learn how aid works and what documents may affect eligibility.',
-      to: '/financial-aid',
-      tone: 'rose' as const,
-    },
-    {
-      title: 'Start Here',
-      description: 'Return to the beginner roadmap and core checklist.',
-      to: '/start-here',
-      tone: 'default' as const,
-    },
-    {
-      title: 'Get Help',
-      description: 'Reach out for direct support if you feel unsure or stuck.',
-      to: '/get-help',
-      tone: 'rose' as const,
-    },
-  ]
-
   return (
     <div className="space-y-4">
       <PageHeaderBlock
         title="Documents & Legal"
-        description="This page helps you understand which documents may be needed and where to get help if you are unsure."
+        description="This page helps you understand which documents may be needed when applying to college and what to do if you are missing documents."
         tone="almond"
       />
 
       <ContentSection tone="rose">
         <SectionWrapper tone="rose">
           <SectionHeading
-            eyebrow="Why This Matters"
-            title="Why documents matter"
-            description="Colleges and financial aid offices often require documents to review applications and eligibility. It is okay if you do not understand every detail yet."
+            eyebrow="Intro"
+            title="Documents Required for Refugees Applying to University or College"
+            description="Refugees applying to universities or colleges are generally required to submit a range of documents. While requirements vary depending on the country and institution, the following are the most commonly requested materials:"
           />
         </SectionWrapper>
       </ContentSection>
@@ -126,113 +27,149 @@ export function DocumentsLegalPage() {
       <ContentSection tone="almond">
         <SectionWrapper tone="almond">
           <SectionHeading
-            eyebrow="Common Documents"
-            title="Documents you may be asked for"
-            description="These are common examples. Your exact list may be different."
+            eyebrow="Academic Documents"
+            title="Academic Documents"
           />
-          <ResponsiveGrid columns={2}>
-            {commonDocuments.map((item, index) => (
-              <Card key={item.name} tone={index % 2 ? 'rose' : 'default'} className="space-y-3">
-                <h3 className="type-h3">{item.name}</h3>
-                <p className="type-body">{item.explanation}</p>
-                <p className="type-muted">Why it matters: {item.whyItMatters}</p>
-              </Card>
-            ))}
-          </ResponsiveGrid>
+          <Card className="space-y-2">
+            <p className="type-body">• High school transcripts or records of previous education</p>
+            <p className="type-body">• Diploma or certificate of graduation (high school or equivalent)</p>
+            <p className="type-body">• Transcripts from any college or university attended (if applicable)</p>
+            <p className="type-body">
+              • Credential evaluation (in some countries, foreign qualifications may need to be assessed)
+            </p>
+          </Card>
         </SectionWrapper>
       </ContentSection>
 
       <ContentSection tone="default">
         <SectionWrapper tone="default">
           <SectionHeading
-            eyebrow="Status Basics"
-            title="Understanding status (simple overview)"
-            description="Your legal/status situation can affect financial aid and applications. Status can differ from person to person, and it is normal to be unsure."
+            title="Proof of Identity and Legal Status"
           />
-          <Callout>
-            <p className="text-sm font-semibold text-semantic-textPrimary">
-              If you are unsure about your status, talk to a trusted advisor or legal professional.
-            </p>
-          </Callout>
+          <Card tone="rose" className="space-y-2">
+            <p className="type-body">• Passport or national identification (if available)</p>
+            <p className="type-body">• Refugee or asylum documentation, such as:</p>
+            <p className="type-body">o Refugee status approval letter</p>
+            <p className="type-body">o Asylum seeker documentation</p>
+            <p className="type-body">o UNHCR registration documents</p>
+          </Card>
         </SectionWrapper>
       </ContentSection>
 
       <ContentSection tone="rose">
         <SectionWrapper tone="rose">
-          <SectionHeading eyebrow="Important Note" title="Always verify details" />
+          <SectionHeading
+            eyebrow="Application Materials"
+            title="Application Materials"
+          />
+          <Card className="space-y-2">
+            <p className="type-body">• Completed application form (online or paper)</p>
+            <p className="type-body">• Personal statement or admissions essay</p>
+            <p className="type-body">• Letters of recommendation (usually from teachers or mentors)</p>
+            <p className="type-body">• Resume or curriculum vitae (CV), if required</p>
+          </Card>
+        </SectionWrapper>
+      </ContentSection>
+
+      <ContentSection tone="almond">
+        <SectionWrapper tone="almond">
+          <SectionHeading
+            eyebrow="Language Proficiency (if applicable)"
+            title="Language Proficiency (if applicable)"
+          />
+          <Card tone="rose" className="space-y-2">
+            <p className="type-body">
+              • Proof of proficiency in the language of instruction (e.g., English)
+            </p>
+            <p className="type-body">
+              • Standardized test scores such as TOEFL or IELTS (may be waived in some cases)
+            </p>
+          </Card>
+        </SectionWrapper>
+      </ContentSection>
+
+      <ContentSection tone="default">
+        <SectionWrapper tone="default">
+          <SectionHeading
+            eyebrow="Financial and Scholarship Documents"
+            title="Financial and Scholarship Documents"
+          />
+          <Card className="space-y-2">
+            <p className="type-body">• Scholarship or financial aid applications</p>
+            <p className="type-body">• Proof of financial need (if applying for aid)</p>
+            <p className="type-body">
+              • Documentation for refugee-specific scholarships or support programs
+            </p>
+          </Card>
+        </SectionWrapper>
+      </ContentSection>
+
+      <ContentSection tone="rose">
+        <SectionWrapper tone="rose">
+          <SectionHeading
+            eyebrow="Alternative Options for Missing Documents"
+            title="Alternative Options for Missing Documents"
+          />
+          <Callout>
+            <p className="type-body">
+              Many refugees may not have access to all required documents. In such cases, some universities may accept:
+            </p>
+            <p className="type-body">• Placement tests or entrance exams</p>
+            <p className="type-body">• Interviews instead of transcripts</p>
+            <p className="type-body">• Written explanations for missing documents</p>
+            <p className="type-body">• Enrollment in foundation or bridging programs</p>
+          </Callout>
+        </SectionWrapper>
+      </ContentSection>
+
+      <ContentSection tone="default">
+        <SectionWrapper tone="default">
+          <SectionHeading
+            title="College Applications for Refugee Students"
+          />
+          <div className="space-y-4">
+            <p className="type-body max-w-prose">
+              For refugees and asylees applying to colleges in Virginia, the admissions process is generally the same as for all other students, but there are a few important things to keep in mind when preparing your application. Colleges like University of Virginia review applications holistically, meaning they consider your grades, experiences, background, and personal story together—not just test scores or GPA.
+            </p>
+            <p className="type-body max-w-prose">
+              Your application is your opportunity to explain your journey clearly and confidently. If you have experienced interruptions in your education, changes in schooling systems, or challenges related to displacement, you should briefly explain these in your application. This can be done in the “Additional Information” section or your personal essay. Admissions officers are trained to understand that refugee students may not have had the same opportunities or consistent records as others.
+            </p>
+            <p className="type-body max-w-prose">
+              It is important that your academic records are as complete as possible. If transcripts are missing or difficult to obtain, you should communicate this directly to the admissions office. Many schools will work with you on alternative documentation or evaluation methods. Some students may also choose to start at a community college such as Piedmont Virginia Community College and later transfer through established pathways, which can make the transition into a four-year university smoother.
+            </p>
+            <p className="type-body max-w-prose">
+              Your personal statement (essay) is especially important. This is where you can share your experiences, strengths, and goals. Focus on your resilience, adaptability, and what you hope to achieve through higher education. Avoid feeling like you must tell your entire story—choose a few meaningful experiences and explain how they shaped you.
+            </p>
+            <p className="type-body max-w-prose">
+              You should also be aware that application requirements can vary by school, and policies may change. It is strongly recommended to check official admissions websites regularly for the most up-to-date information. Programs like Advise Virginia and local high school counselors can help guide you through the process and answer questions.
+            </p>
+            <p className="type-body max-w-prose">
+              Finally, many refugee students feel uncertain about whether they belong at selective universities. These concerns are common, but colleges in Virginia are actively working to support students from diverse and nontraditional backgrounds. There are also transfer pathways, support programs, and campus organizations that help students succeed once they enroll.
+            </p>
+            <p className="type-body max-w-prose">
+              Overall, while the application process is standardized, each student’s situation is unique. Taking the time to clearly present your experiences and staying informed through official resources will give you the best chance of success.
+            </p>
+          </div>
+        </SectionWrapper>
+      </ContentSection>
+
+      <ContentSection tone="almond">
+        <SectionWrapper tone="almond">
+          <SectionHeading eyebrow="Conclusion" title="Conclusion" />
+          <p className="type-body max-w-prose">
+            Although documentation requirements can vary, many universities offer flexible admission pathways for refugees. Applicants are encouraged to contact admissions offices directly to explore available options and support services.
+          </p>
+        </SectionWrapper>
+      </ContentSection>
+
+      <ContentSection tone="default">
+        <SectionWrapper tone="default">
+          <SectionHeading eyebrow="Important Note" title="Important Note" />
           <Callout>
             <p className="text-sm font-semibold text-semantic-textPrimary">
               Policies and requirements can change, and every situation is different. Always confirm with official sources.
             </p>
           </Callout>
-        </SectionWrapper>
-      </ContentSection>
-
-      <ContentSection tone="almond">
-        <SectionWrapper tone="almond">
-          <SectionHeading
-            eyebrow="Where To Get Help"
-            title="Trusted places to ask questions"
-            description="You do not need to solve everything on your own."
-          />
-          <ResponsiveGrid columns={2}>
-            {helpResources.map((resource, index) => (
-              <Card key={resource.title} tone={index % 2 ? 'default' : 'rose'} className="space-y-3">
-                <h3 className="type-h3">{resource.title}</h3>
-                <p className="type-body">{resource.description}</p>
-                <TextLink href={resource.href}>Contact or learn more</TextLink>
-              </Card>
-            ))}
-          </ResponsiveGrid>
-        </SectionWrapper>
-      </ContentSection>
-
-      <ContentSection tone="default">
-        <SectionWrapper tone="default">
-          <SectionHeading eyebrow="Common Questions" title="If you feel uncertain" />
-          <div className="space-y-3">
-            {faqs.map((item, index) => (
-              <Card key={item.question} tone={index % 2 ? 'rose' : 'default'} className="space-y-2 p-5 md:p-6">
-                <p className="text-sm font-semibold text-semantic-textPrimary">{item.question}</p>
-                <p className="type-body">{item.answer}</p>
-              </Card>
-            ))}
-          </div>
-        </SectionWrapper>
-      </ContentSection>
-
-      <ContentSection tone="rose">
-        <SectionWrapper tone="rose">
-          <SectionHeading
-            eyebrow="Next Steps"
-            title="Continue with the support you need"
-            action={
-              <div className="flex flex-wrap gap-2.5">
-                <Button onClick={() => navigate('/financial-aid')}>Financial Aid</Button>
-                <Button variant="secondary" onClick={() => navigate('/get-help')}>
-                  Get Help
-                </Button>
-              </div>
-            }
-          />
-          <ResponsiveGrid columns={3}>
-            {nextSteps.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                className="group rounded-panel focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-semantic-focus focus-visible:ring-offset-2 focus-visible:ring-offset-semantic-canvas"
-              >
-                <Card
-                  tone={item.tone}
-                  className="h-full space-y-3 transition-colors group-hover:border-semantic-borderStrong/70"
-                >
-                  <h3 className="type-h3">{item.title}</h3>
-                  <p className="type-body">{item.description}</p>
-                  <p className="type-muted">Open section</p>
-                </Card>
-              </Link>
-            ))}
-          </ResponsiveGrid>
         </SectionWrapper>
       </ContentSection>
     </div>
