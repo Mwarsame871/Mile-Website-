@@ -269,6 +269,19 @@ export function StartHerePage() {
         </SectionWrapper>
       </ContentSection>
 
+      <ContentSection tone="rose">
+        <SectionWrapper tone="rose">
+          <SectionHeading
+            title="Student Interview: Abi’s Journey"
+          />
+          <Callout>
+            <p className="type-body max-w-prose">
+              Abi describes her journey to college in the United States as both challenging and transformative. She arrived during her junior year of high school, first settling on the West Coast before later moving to Virginia for college. Reflecting on that transition, she explains that starting at a Virginia community college gave her something she truly needed: time. “It helped me get used to everything,” she shares, pointing to both the academic system and the cultural adjustment. Because she had not completed all four years of high school in the U.S., she also had to take an English placement-related exam—an extra step that many students in similar situations quietly face.
+            </p>
+          </Callout>
+        </SectionWrapper>
+      </ContentSection>
+
       <ContentSection tone="default">
         <SectionWrapper tone="default">
           <SectionHeading
@@ -334,6 +347,17 @@ export function StartHerePage() {
               </Callout>
             ))}
           </div>
+        </SectionWrapper>
+      </ContentSection>
+
+      <ContentSection tone="default">
+        <SectionWrapper tone="default">
+          <SectionHeading title="Student Interview: Abi’s Journey" />
+          <Callout>
+            <p className="type-body max-w-prose">
+              Now, with her enrollment deferred and her financial aid applications resubmitted through VASA and CSS, Abi is preparing to transfer this fall with renewed clarity and hope. Looking back, she strongly recommends the community college pathway for students in similar situations, especially those adjusting to a new country or education system. For Abi, community college was more than just a starting point—it was a bridge. “It gave me time to adjust,” she reflects, “and now I feel ready for a four-year school.”
+            </p>
+          </Callout>
         </SectionWrapper>
       </ContentSection>
 

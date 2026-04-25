@@ -87,6 +87,12 @@ export function GetHelpPage() {
               advisors, and programs that may be able to support you.
             </p>
           </Callout>
+          <Callout tone="subtle">
+            <p className="text-sm font-semibold text-semantic-textPrimary">Student story</p>
+            <p className="type-body max-w-prose">
+              When asked about the most difficult part of her journey, Abi doesn’t point to academics—she points to navigating the system. “It’s hard when you don’t know what’s going on,” she says. Without people around her who had gone through the same process, much of it felt like trial and error. She credits the guidance she eventually found at her community college as a turning point, especially when it came to financial aid paperwork and understanding her options. “You really have to reach out,” she adds. “Getting help makes a big difference.”
+            </p>
+          </Callout>
         </SectionWrapper>
       </ContentSection>
 

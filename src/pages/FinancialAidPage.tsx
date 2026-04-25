@@ -57,6 +57,12 @@ export function FinancialAidPage() {
               Resources section.*
             </p>
           </Callout>
+          <Card tone="rose" className="space-y-2 p-5 md:p-6">
+            <p className="text-sm font-semibold text-semantic-textPrimary">Student story</p>
+            <p className="type-body max-w-prose">
+              After two years, she applied to transfer to a selective four-year university in Virginia and was accepted. While that moment marked a major achievement, it did not immediately lead to enrollment. “I had to delay my acceptance,” she explains, describing how the financial aid package she initially received left a significant gap. Despite her family living in Virginia for several years—paying taxes and owning a home—her immigration status made the process far more complicated. Abi is currently in the United States on a visa and is in the process of applying for permanent residency, but delays in that process have affected what she qualifies for. She notes that recent federal policy changes have placed restrictions and additional scrutiny on individuals from certain countries, slowing down visa and residency processing for many students in similar situations.
+            </p>
+          </Card>
         </SectionWrapper>
       </ContentSection>
 
@@ -104,6 +110,14 @@ export function FinancialAidPage() {
               <p className="type-body">Financial aid and status can be very case by case</p>
             </Card>
           </ResponsiveGrid>
+          <Callout>
+            <p className="text-sm font-semibold text-semantic-textPrimary">
+              Abi’s financial aid experience
+            </p>
+            <p className="type-body max-w-prose">
+              Because she is not yet a permanent resident, Abi could not complete the FAFSA, which is the primary pathway for federal financial aid. Instead, she had to navigate alternatives like the Virginia Alternative State Aid (VASA) application and the CSS Profile. “It was a lot,” she says, emphasizing how overwhelming the process felt. While VASA allowed her to still be considered for need-based aid, it did not fully replace FAFSA, and understanding what to do—and when—was not always clear. Even something as fundamental as qualifying for in-state tuition at her community college took time. “I only got in-state near the end,” she explains, describing a long and detailed process that required her to prove strong ties to Virginia while being on a temporary visa.
+            </p>
+          </Callout>
         </SectionWrapper>
       </ContentSection>
 
@@ -125,6 +139,12 @@ export function FinancialAidPage() {
             Residency isn’t entirely tied to admissions, and students unsure of their
             residency status are still encouraged to apply.
           </p>
+          <Callout>
+            <p className="text-sm font-semibold text-semantic-textPrimary">Student story</p>
+            <p className="type-body max-w-prose">
+              After reaching out and asking more questions about her situation, Abi says she received reassurance from the university that they aim to meet 100% of demonstrated financial need, even for students applying through alternative pathways like VASA and CSS. “That gave me hope,” she explains. With that clarity, she moved forward with submitting updated financial aid materials, now with a better understanding of how her need would be evaluated.
+            </p>
+          </Callout>
           <ResponsiveGrid columns={2}>
             <Card className="space-y-2">
               <p className="type-body">
@@ -159,12 +179,6 @@ export function FinancialAidPage() {
                 determined by suboffice in admissions, office of Virginia status, Virginia
                 requirement websites can be accessed to ensure if status.
               </p>
-              <div className="rounded-soft border border-semantic-borderSoft px-3 py-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-semantic-textSecondary/75">
-                  Raw note from interview
-                </p>
-                <p className="type-muted">Contact directly!! Get contact from Julie for woman</p>
-              </div>
               <TextLink href="https://www.schev.edu/financial-aid/in-state-residency/guidelines-for-in-state-residency-tuition">
                 SCHEV guidelines for in-state residency & tuition:
                 https://www.schev.edu/financial-aid/in-state-residency/guidelines-for-in-state-residency-tuition
